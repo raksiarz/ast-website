@@ -1,5 +1,5 @@
 import { makeAutoObservable, observable, action, computed } from "mobx";
-// import { getAST, getEvaluated } from 'monkeylang'
+import { getAST, getEvaluated } from "monkeylang";
 
 export class Store {
     input: string = ''
@@ -21,13 +21,12 @@ export class Store {
     }
 
     get getAST() {
-        // return getAST(this.input)
-        return ''
+        return getAST(this.input)
     }
 
     get getEval() {
-        // return getEvaluated(this.input)
-        return ''
+        console.log('action: ', action)
+        return getEvaluated(this.input)
     }
 }
 

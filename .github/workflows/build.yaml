@@ -1,0 +1,13 @@
+name: Run Build
+
+on:
+  push: 
+    branches: [master, main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - run: npm ci
+      - run: npm run bundle

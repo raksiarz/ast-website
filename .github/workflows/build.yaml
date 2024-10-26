@@ -21,8 +21,6 @@ jobs:
       - run: npm ci
       - run: npm run bundle
       - uses: actions/upload-pages-artifact@v3
-        with: 
-          path: dist/
   
   deploy:
     runs-on: ubuntu-latest

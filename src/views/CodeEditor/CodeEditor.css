@@ -1,4 +1,9 @@
 .input {
     width: 100vw;
     height: 50vh;
+    outline: 1px solid grey;
+}
+
+.button {
+    margin: 2px 10px;
 }

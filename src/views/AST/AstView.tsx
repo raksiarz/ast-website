@@ -3,7 +3,7 @@ import { Tree } from "antd"
 
 const AstView = observer(({ store }: any) => {
     // console.log('ast view collection: ', store.getAST)
-    console.log('ast tree: ', store.tree)
+    // console.log('ast tree: ', store.tree)
 
     return (
         <>

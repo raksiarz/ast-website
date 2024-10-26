@@ -1,4 +1,4 @@
-import { makeAutoObservable, observable, action, computed, toJS } from "mobx";
+import { makeAutoObservable, observable, action, computed } from "mobx";
 import { getAST, getEvaluated } from "monkeylang";
 
 let TREE: any = null
@@ -29,7 +29,7 @@ export class Store {
         for (var property in obj) {
             if (obj.hasOwnProperty(property)) {
                 const node = { [property]: obj[property] }
-                console.log('node: ', property, node)
+                // console.log('node: ', property, node)
                 this.stack.push(node)
                 path.push(node)
                 this.popAmount++
@@ -37,8 +37,8 @@ export class Store {
                     this.iterate(obj[property], path)
                 } else {
                     for (let i = 0; i < this.popAmount; i++) {
-                        const popped = this.stack.shift()
-                        console.log(toJS(popped), toJS(this.stack))
+                        // const popped = this.stack.shift()
+                        // console.log(toJS(popped), toJS(this.stack))
                         const node: any = { title: property, children: [TREE] }
                         TREE = node
                     }
@@ -55,7 +55,7 @@ export class Store {
         const statements = ast.statements
         const path = this.iterate(statements, [])
         const tree = [{title: "Program", key: '1', children: path}]
-        console.log('path: ', path, TREE)
+        // console.log('path: ', path, TREE)
         return statements.length ? tree : []
     }
 

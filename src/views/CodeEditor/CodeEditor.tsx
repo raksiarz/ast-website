@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { observer } from 'mobx-react'
-import CodeMirror from '@uiw/react-codemirror'
 import { Button } from 'antd'
+import CodeMirror from '@uiw/react-codemirror'
 import './CodeEditor.css'
 
 const Editor = observer(({ store }: any) => {
@@ -17,9 +17,12 @@ const Editor = observer(({ store }: any) => {
                 onChange={onChange}
                 value={inputValue}
                 className='input'
-                height='80%'
+                height='100%'
+                basicSetup={{
+                    lineNumbers: true
+                }}
             />
-            <Button onClick={() => store.handleSubmit(inputValue)} >Generate</Button>
+            <Button className='button' onClick={() => store.handleSubmit(inputValue)} >Run</Button>
         </>
     )
 })

@@ -9,5 +9,6 @@ jobs:
     runs-on: ubuntu-latest
   
     steps:
+      - run: npm install
       - run: npm ci
       - run: npm run bundle

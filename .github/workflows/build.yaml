@@ -1,4 +1,4 @@
-name: Run Build
+name: Build and Deploy
 
 on:
   push: 
@@ -16,3 +16,9 @@ jobs:
 
       - run: npm ci
       - run: npm run bundle
+  
+  deploy:
+    steps:
+      - name: Deploy to GitHub pages
+        id: deployment
+        uses: actions/deploy-pages@v4

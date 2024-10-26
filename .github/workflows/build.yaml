@@ -18,6 +18,8 @@ jobs:
       - run: npm run bundle
   
   deploy:
+    runs-on: ubuntu-latest
+
     steps:
       - name: Deploy to GitHub pages
         id: deployment

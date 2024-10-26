@@ -2,7 +2,8 @@ module.exports = {
     entry: './src/main',
     target: ['web', 'es5'],
     output: {
-        filename: 'app.bundle.js'
+        filename: 'app.bundle.js',
+        path: '/'
     },
     module: {
         rules: [

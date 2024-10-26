@@ -3,7 +3,6 @@ module.exports = {
     target: ['web', 'es5'],
     output: {
         filename: 'app.bundle.js',
-        path: '/'
     },
     module: {
         rules: [

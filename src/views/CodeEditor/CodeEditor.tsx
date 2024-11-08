@@ -2,9 +2,14 @@ import React, { useState } from 'react'
 import { observer } from 'mobx-react'
 import { Button } from 'antd'
 import CodeMirror from '@uiw/react-codemirror'
+import { Store } from '../../app/store'
 import './CodeEditor.css'
 
-const Editor = observer(({ store }: any) => {
+interface EditorProps {
+    store: Store
+}
+
+const Editor = observer(({ store }: EditorProps) => {
     const [inputValue, setInputValue] = useState('')
 
     const onChange = React.useCallback((val: any, _: any) => {

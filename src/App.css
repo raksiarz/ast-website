@@ -4,8 +4,9 @@
     margin: 0;
 }
 
-.sash {
-    color: red;
-    width: 10px;
-    height: 10px;
+.app {
+    height: 100vh;
+    background-color: #222831;
+    color: #EEEEEE;
+    font-family: 'Fira Code';
 }

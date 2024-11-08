@@ -1,0 +1,19 @@
+.code-container {
+    width: 500px;
+    margin: 100px;
+}
+
+.bottom-container {
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #31363F;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: .5px solid rgba(238, 238, 238, .5);
+}
+
+.button {
+    cursor: pointer;
+}

@@ -1,32 +1,21 @@
-import { useState } from "react"
-import SplitPane, { Pane, SashContent } from "split-pane-react"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import store from "./app/store"
+import Navbar from "./components/Navbar/Navbar"
+import Documentation from "./views/Docs/Documentation"
 import Editor from "./views/CodeEditor/CodeEditor"
-import AstView from "./views/AST/AstView"
-import Console from "./views/Console/Console"
 import './App.css'
 
 function App() {
-  const [sizes, setSizes] = useState([100, 200])
 
   return (
-    <div>
-      <SplitPane
-        sizes={sizes}
-        onChange={setSizes}
-        resizerSize={9}
-        sashRender={() => (
-          <SashContent className="sash" />
-        )}
-      >
-        <Pane>
-          <Editor store={store} />
-          <Console store={store} />
-        </Pane>
-        <Pane>
-          <AstView store={store} />
-        </Pane>
-      </SplitPane>
+    <div className="app">
+      <BrowserRouter>
+      <Navbar />
+        <Routes>
+          <Route path="/" element={<Documentation store={store} />} />
+          <Route path="/editor" element={<Editor store={store} />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }

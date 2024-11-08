@@ -22,4 +22,4 @@ dist-ssr
 *.sln
 *.sw?
 
-*.bundle.js
+*.bundle.js*

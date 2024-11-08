@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
     entry: './src/main',
     target: ['web', 'es5'],
@@ -17,6 +19,11 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './index.html'
+        })
+    ],
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.css']
     }

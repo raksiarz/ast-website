@@ -3,10 +3,10 @@ import './Navbar.css'
 
 const Navbar = () => {
     return (
-        <div className="container">
+        <div className="navbar-container">
             Navbar
             <ul className='links'>
-                <Link to={'/'} className='link'>Docs</Link>
+                <Link to={'documentation'} className='link'>Docs</Link>
                 <Link to={'editor'} className='link'>Editor</Link>
             </ul>
         </div>

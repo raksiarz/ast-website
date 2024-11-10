@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import store from "./app/store"
 import Navbar from "./components/Navbar/Navbar"
 import Home from "./views/Home/Home"
 import Documentation from "./views/Docs/Documentation"
@@ -15,8 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ast-website" element={<Home />} /> // Need this due to the gh pages routing
-          <Route path="/documentation" element={<Documentation store={store} />} />
-          <Route path="/editor" element={<CodeEditor store={store} />} />
+          <Route path="/documentation" element={<Documentation />} />
+          <Route path="/editor" element={<CodeEditor />} />
         </Routes>
       </BrowserRouter>
     </div>

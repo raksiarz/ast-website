@@ -1,0 +1,12 @@
+.side-bar-container {
+    width: 25%;
+    height: 100%;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list-item {
+    cursor: pointer;
+}

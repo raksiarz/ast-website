@@ -1,22 +1,21 @@
 import React, { useState } from 'react'
 import { observer } from 'mobx-react'
-import { Store } from '../../app/store'
 import CodeMirror from '@uiw/react-codemirror'
+import SideBar from './SideBar/SideBar'
+import store from '../../app/store'
 import './CodeEditor.css'
 
-interface CodeEditorProps {
-    store: Store
-}
-
-const CodeEditor = observer(({ store }: CodeEditorProps) => {
+const CodeEditor = observer(() => {
     const [inputValue, setInputValue] = useState('')
 
     const onChange = React.useCallback((val: any, _: any) => {
         setInputValue(val)
+        store.exampleInput = inputValue
     }, [])
 
     return (
         <div className='form-container'>
+            <SideBar />
             <div className='editor-form'>
                 <CodeMirror
                     onChange={onChange}

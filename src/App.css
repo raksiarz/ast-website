@@ -6,6 +6,8 @@
 
 .app {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-color: #222831;
     color: #EEEEEE;
     font-family: 'Fira Code';

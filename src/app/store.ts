@@ -17,7 +17,6 @@ export class Store {
     }
 
     handleSubmit(input: string) {
-        console.log('input: ',input)
         this.input = input
     }
 

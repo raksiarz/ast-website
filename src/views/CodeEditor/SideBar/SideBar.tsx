@@ -1,5 +1,6 @@
 import { observer } from 'mobx-react'
 import examples from './examples.js'
+import store from '../../../app/store.js'
 import './SideBar.css'
 
 const SideBar = observer(({ editor }: any) => {
@@ -9,7 +10,10 @@ const SideBar = observer(({ editor }: any) => {
             <ul>
                 {examples.map((el: any) => {
                     return (
-                        <li className='list-item' onClick={() => editor.inputValue = el.value}>
+                        <li className='list-item' onClick={() => {
+                            editor.inputValue = el.value
+                            store.input = ''
+                        }}>
                             <h5>{el.title}</h5>
                         </li>
                     )

@@ -2,6 +2,8 @@ import React from 'react'
 import { observer } from 'mobx-react'
 import { makeAutoObservable, observable, runInAction } from 'mobx'
 import CodeMirror from '@uiw/react-codemirror'
+import { javascript } from '@codemirror/lang-javascript'
+import { atomone } from '@uiw/codemirror-theme-atomone'
 import SideBar from './SideBar/SideBar'
 import store from '../../app/store'
 import './CodeEditor.css'
@@ -34,6 +36,8 @@ const CodeEditor = observer(() => {
                     value={editor.inputValue}
                     className='input'
                     height='100%'
+                    extensions={[javascript()]}
+                    theme={atomone}
                 />                
                 <div className='output-container'>
                     <button type='submit' className='submit-button' onClick={() => store.handleSubmit(editor.inputValue)}>Run</button>

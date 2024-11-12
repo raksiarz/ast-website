@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@babel/preset-react": "^7.25.7",
+    "@codemirror/lang-javascript": "^6.2.2",
+    "@uiw/codemirror-theme-atomone": "^4.23.6",
     "@uiw/react-codemirror": "^4.23.6",
     "babel-loader": "^9.2.1",
     "mobx": "^6.13.4",

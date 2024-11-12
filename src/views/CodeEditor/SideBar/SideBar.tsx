@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react'
 import examples from './examples.js'
-import store from '../../../app/store.js'
+import store from '../../../app/store'
 import './SideBar.css'
 
 const SideBar = observer(({ editor }: any) => {
